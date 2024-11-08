@@ -1,79 +1,119 @@
-/* src/components/Contact.css */
-
 .contact {
-    background-color: #282c34; /* Dark background for footer */
-    color: #ffffff; /* White text color */
+    background-color: #090805;
+    color: #e0e6ed;
     padding: 40px 20px;
-    border-top: 5px solid #007bff; /* Top border for styling */
-    text-align: center;
+    border-top: 3px solid #ffd700;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 40px; /* Add more space between columns if needed */
+    text-align: left;
+    align-items: flex-start; /* Aligns the items to start from the top */
 }
 
 .contact h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    color: #ffd700;
 }
 
 .contact-info {
-    margin-bottom: 20px;
+    line-height: 1.6;
+    flex: 1;
+    max-width: 400px;
 }
 
 .contact-info p {
-    margin: 5px 0;
+    margin: 8px 0;
+    font-size: 1em;
+    color: #b0bec5;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    flex: 1;
+    max-width: 450px;
 }
 
 .form-input, .form-textarea {
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
+    padding: 12px 16px; /* Slightly more padding for a rounded, comfortable look */
+    border: 1px solid #2a3139;
+    border-radius: 25px; /* Rounded corners for a cute effect */
+    font-size: 1em; /* Increase font size for readability */
+    background-color: #4d4f3a; /* Slightly lighter background for a softer look */
+    color: #e0e6ed;
+    width: 100%; /* Full width input boxes */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
-.form-input {
-    background-color: #444c56; /* Darker input background */
-    color: #ffffff; /* White text color */
+.form-input::placeholder, .form-textarea::placeholder {
+    color: #b0bec5; /* Lighter placeholder text */
+    font-style: italic; /* Italicize placeholder for a soft look */
+}
+
+.form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #ffd700; /* Highlight border with gold on focus */
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5); /* Glow effect on focus */
 }
 
 .form-textarea {
     resize: none;
     height: 100px;
-    background-color: #444c56; /* Darker textarea background */
-    color: #ffffff; /* White text color */
 }
 
 .form-input:focus, .form-textarea:focus {
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #ffd700;
+    box-shadow: 0 0 3px rgba(255, 215, 0, 0.5);
 }
 
 .form-button {
-    padding: 15px;
+    padding: 8px 16px; /* Reduced padding for a smaller button */
     border: none;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1.1em;
+    border-radius: 20px; /* Rounded edges for a "cute" look */
+    background-color: #ffd700;
+    color: #1a1f24;
+    font-size: 0.9em; /* Slightly smaller font */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a slight shadow for depth */
+    width: 200px;
+    height:45px;
+    align-self: flex-end;
+    font-style:italic
 }
 
 .form-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+    background-color: #ffcc00;
+    transform: translateY(-1px) scale(1.05); /* Slight lift effect */
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    .contact {
-        padding: 20px;
+@media (max-width: 800px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
     }
-    
+
     .contact h2 {
-        font-size: 1.5em;
+        font-size: 1.8em;
+    }
+
+    .contact-info p {
+        font-size: 0.95em;
+    }
+
+    .form-input, .form-textarea {
+        max-width: 100%; /* Ensures full-width on smaller screens */
     }
 }

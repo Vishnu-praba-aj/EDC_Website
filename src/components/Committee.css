@@ -3,7 +3,7 @@
 .committee {
     text-align: center;
     padding: 40px 0;
-    background-color: #0d0d0d; /* Dark background */
+    background-color: rgba(0, 0, 0, 0.2);/* Dark background */
   }
   
   .committee h2 {

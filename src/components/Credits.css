@@ -1,0 +1,64 @@
+/* Credits Section */
+.credits {
+    padding: 0 20px 20px; /* Padding only on sides and bottom */
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    margin-top: 0; /* No margin above to blend with previous section */
+}
+
+.credits-title {
+    font-size: 2em;
+    color: #ffd700;
+    margin: 15px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.credits-description {
+    font-size: 1.2em;
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+/* Horizontal List for Team Members */
+.credits-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0 10px; /* Padding on sides for spacing from borders */
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.credit-item {
+    font-size: 1em;
+    color: #fff;
+}
+
+.credit-name {
+    font-weight: bold;
+    color: #ffd700; /* Highlight name in gold */
+    transition: color 0.3s ease;
+}
+
+.credit-item:hover .credit-name {
+    color: #ff6f61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .credits {
+        padding: 0 10px 10px; /* Adjust padding on smaller screens */
+    }
+    .credits-title {
+        font-size: 1.8em;
+    }
+    .credits-description {
+        font-size: 1em;
+    }
+    .credits-list {
+        gap: 15px; /* Reduce gap on smaller screens */
+    }
+}
