@@ -1,36 +1,118 @@
-/* src/components/Hero.css */
-.hero {
-    position: relative;
-    height: 80vh;
-    background: url("D:/Desktop/html,css,js/edc/edc-website/public/images/bg.png") no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .hero-overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  to {
+    opacity: 1;
   }
-  
-  .hero-title {
-    color: #f57b17;
-    font-size: 4em;
-    margin: 0;
-    z-index: 1;
-    position: relative;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
   }
-  
-  .hero-text {
-    font-size: 1.5em;
-    margin-top: 10px;
-    z-index: 1;
-    position: relative;
-    color: #f5f5f5;
+  to {
+    transform: translateX(0);
   }
-  
+}
+
+.Background {
+  background-color: black;
+  height: 100%;
+}
+
+.Header_fieldset {
+  margin: auto;
+  padding: 0px;
+}
+
+.Header {
+  /*background-color: hsla(218, 100%, 20%, 0.757);*/
+  /*background:linear-gradient(rgba(231, 165, 33, 0.689), rgba(255, 217, 0, 0.777), rgba(231, 165, 33, 0.689));*/
+  background: linear-gradient(#daa520eb,#f8d910eb,#daa520eb);
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  display: inline-flex;
+  position:fixed;
+  z-index: 10;
+  top:0;
+}
+
+.appLogo, .profile {
+  height: 50px;
+  width: 50px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.options {
+  margin-left: 1000px;
+  margin-right: auto;
+  color: black;
+  font-family:Cambria;
+  padding-left: 400px;
+  padding-top: 10px;
+}
+
+.optionItem {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.picture-description-container {
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 90px;
+}
+
+.Entrepreneur-pic {
+  width: 90%;
+  height: 750px;
+  padding-top: 20px;
+  padding-left: 20px;
+  position: relative;
+  animation: fadeIn 1s ease-in-out forwards;
+  z-index: 0;
+}
+
+.Description {
+  position: absolute;
+  top: 20%; /* Adjusts vertical position over the image */
+  left: 50%;
+  transform: translateX(-50%); /* Centers horizontally */
+  color: azure;
+  text-align: center;
+  padding: 20px;
+  width: 40%;
+  font-size: xx-large;
+  font-style: italic;
+  background-color: rgba(0, 0, 0, 0.65); /* Translucent background */
+  border-radius: 10px;
+  border-color: gold;
+  border-width: 1px;
+  border-style: solid;
+  z-index: 1; 
+  animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+.speakers-title-container{
+  width:100%;
+  height:60px;
+  background:linear-gradient(#ad8318,#f8d910,#ad8318); ;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.innovative-speakers {
+  color: black;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom:10px;
+  font-size: xx-large;
+  padding-left: 50rem;
+  font-family: Cambria;
+}
