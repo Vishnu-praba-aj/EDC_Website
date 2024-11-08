@@ -44,9 +44,9 @@ const committeeData = [
       photo: "/LakshyaMembers/Siri.jpg"
     },
     {
-      name: "Sanjana S J",
+      name: "Sanjnaa S",
       role: "Treasurer",
-      photo: "/LakshyaMembers/Sanjana_S.J.jpg"
+      photo: "LakshyaMembers/Sanjnaa_S.JPG"
     }, 
     {
       name: "Swaati Selvakumar",
@@ -66,7 +66,7 @@ const committeeData = [
     {
       name: "Yashmitha",
       role: "Event Manager",
-      photo: "/LakshyaMembers/yashmitha.jpg"
+      photo: "/LakshyaMembers/yashmitha .jpg"
     }
   ];
   
