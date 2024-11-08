@@ -1,6 +1,22 @@
 // src/components/CommitteeData.js
 
 const committeeData = [
+    
+    {
+      name: "Aniruth",
+      role: "Event Manager",
+      photo: "/LakshyaMembers/Aniruth.jpg"
+    },
+    {
+      name: "Ashwin Ravi",
+      role: "Treasurer",
+      photo: "/LakshyaMembers/Ashwin Ravi.jpg"
+    },
+    {
+      name: "Cris",
+      role: "Event Manager",
+      photo: "/LakshyaMembers/cris.jpg"
+    },
     {
       name: "Harish Kumar",
       role: "President",
@@ -12,37 +28,46 @@ const committeeData = [
       photo: "/LakshyaMembers/srithaja.jpg"
     },
     {
-      name: "Chris Evans",
-      role: "Event Manager",
-      photo: "/images/c1.jpg"
-    },
-    {
-      name: "Dana Lee",
+      name: "Jaganathan S J",
       role: "Treasurer",
-      photo: "/images/c1.jpg"
-    },
-    {
-      name: "Chris Evans",
-      role: "Event Manager",
-      photo: "/images/c1.jpg"
+      photo: "LakshyaMembers/Jaganathan_S.JPG"
     },
 
     {
-      name: "Dana Lee",
+      name: "Likhitha",
       role: "Treasurer",
-      photo: "/images/c1.jpg"
-    },
-
-    {
-      name: "Dana Lee",
-      role: "Treasurer",
-      photo: "/images/c1.jpg"
+      photo: "/LakshyaMembers/Likhitha_.jpg"
     }
     , {
-      name: "Chris Evans",
+      name: "Siri",
       role: "Event Manager",
-      photo: "/images/c1.jpg"
+      photo: "/LakshyaMembers/Siri.jpg"
     },
+    {
+      name: "Sanjana S J",
+      role: "Treasurer",
+      photo: "/LakshyaMembers/Sanjana_S.J.jpg"
+    }, 
+    {
+      name: "Swaati Selvakumar",
+      role: "Event Manager",
+      photo: "/LakshyaMembers/Swaati_Selvakumar.jpg"
+    },
+    {
+      name: "Vaibavasri S",
+      role: "Event Manager",
+      photo: "LakshyaMembers/Vaibavasri S.HEIC"
+    },
+    {
+      name: "Vishal",
+      role: "Event Manager",
+      photo: "/LakshyaMembers/vishal.jpg"
+    },
+    {
+      name: "Yashmitha",
+      role: "Event Manager",
+      photo: "/LakshyaMembers/yashmitha.jpg"
+    }
   ];
   
   export default committeeData;
