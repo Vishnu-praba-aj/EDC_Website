@@ -2,6 +2,7 @@
 import React from "react";
 import Hero from "./components/Hero";
 import Events from "./components/Events";
+//import Timeline from "./components/Timeline";
 import Statistics from "./components/Statistics";
 import Faculty from "./components/Faculty";
 import Committee from "./components/Committee";
@@ -16,10 +17,10 @@ function App() {
     <div className="App">
       <Hero />
       <Events />
+      
       <Statistics />
       <Faculty />
       <Committee />
-      
       <Gallery />
       <Achievements />
       <Credits/>
