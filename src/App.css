@@ -1,10 +1,8 @@
+/* src/App.css */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-image: url('D:\Desktop\edc-website\public\images\image.jpg'); /* Use the relative path from the public folder */
-  background-size: auto;
-  background-position: top left;
-  background-repeat: repeat;
+  background-color: #0d0d0d;
   color: #f5f5f5;
   overflow-x: hidden;
 }
@@ -27,14 +25,8 @@ body {
 }
 
 .section {
+  margin-top: 50px;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  margin: 0; /* Remove default margins between sections */
-}
-
-.section:not(:first-child) {
-  margin-top: 0; /* Ensure no space at the top of each section except the first one */
 }
 
 .card {
@@ -60,5 +52,3 @@ body {
     opacity: 1;
   }
 }
-
-
