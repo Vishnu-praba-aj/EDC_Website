@@ -20,9 +20,9 @@ function Contact() {
                 {/* Column 1: Contact Info */}
                 <div className="contact-info">
                     <h2>Contact Us</h2>
-                    <p><strong>Email:</strong> info@example.com</p>
-                    <p><strong>Phone:</strong> +1 (234) 567-8901</p>
-                    <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+                    <p><strong>Email:</strong> ssnlakshaya.com</p>
+                    <p><strong>Phone:</strong> 04325 12345</p>
+                    <p><strong>Address:</strong> SSN,OMR,Chennai </p>
                 </div>
 
                 {/* Column 2: Feedback Form */}

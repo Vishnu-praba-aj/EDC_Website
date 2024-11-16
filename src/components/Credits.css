@@ -1,10 +1,10 @@
 /* Credits Section */
 .credits {
     padding: 0 20px 20px; /* Padding only on sides and bottom */
-    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.7);
     color: #ccc;
     text-align: center;
-    margin-top: 0; /* No margin above to blend with previous section */
+    margin: 0; /* No margin above to blend with previous section */
 }
 
 .credits-title {

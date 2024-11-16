@@ -5,8 +5,9 @@
   }
   
   .faculty h2 {
+    font-size: 2.5em;
     color: #ffd700;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   
   .faculty-cards {
@@ -18,7 +19,7 @@
   
   .faculty-card {
     background-color: #222;
-    width: 250px; /* Card width */
+    width: 350px; /* Card width */
     max-width: 100%; /* Ensures the card doesn’t overflow */
     height: auto;
     border-radius: 12px;
@@ -48,23 +49,34 @@
   }
   
   .faculty-info {
-    padding: 15px;
+    padding: 50px;
   }
   
   .faculty-info h3 {
     margin: 10px 0 5px;
-    font-size: 1.2em;
-    color: #ffd700;
+    padding: 5px;
+    font-size: 2em !important;
+    font-weight: bold !important;
+    color: #ffd700 !important;
+    white-space: nowrap; /* Prevents text wrapping */
+    /* Ensures text doesn’t overflow the container */
+    text-overflow: ellipsis; /* Adds ellipsis if text is too long */
   }
+  
   
   .faculty-info h4 {
     margin: 5px 0;
-    font-weight: normal;
-    color: #cccccc;
+    padding: 2px;
+    font-size: 1.5em !important; /* Ensure visibility */
+    font-weight: 500 !important;
+    color: #e0e0e0 !important; /* High contrast for testing */
   }
   
   .faculty-info p {
-    font-size: 0.9em;
-    color: #dddddd;
+    font-size: 0.9em !important;
+    color: #dddddd !important;
+    line-height: 1.4 !important;
+    text-align: justify !important;
+    padding: 10px !important;
   }
   

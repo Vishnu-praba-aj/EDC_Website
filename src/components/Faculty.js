@@ -14,7 +14,7 @@ const Faculty = () => {
                         <div className="faculty-info">
                             <h3>{faculty.name}</h3>
                             <h4>{faculty.title}</h4>
-                            <p>{faculty.description}</p>
+                            
                         </div>
                     </div>
                 ))}

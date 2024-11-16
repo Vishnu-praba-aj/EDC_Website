@@ -1,15 +1,19 @@
 
   .Background {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);;
     height: 100%;
   }
    
   .innovative-speakers {
-    color: azure;
-    justify-content: center;
-    padding-top: 115px;
+    color: #ffd700;
+    display: flex; /* Ensures flexbox is applied */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    margin: 0; /* Removes extra margin */
     font-size: xx-large;
-  }
+    height: 50vh; /* Takes full viewport height to center vertically */
+}
+
   
   /* Carousel */
   

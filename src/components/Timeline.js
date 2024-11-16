@@ -1,54 +1,59 @@
-// Timeline data as an array of objects
-const timelineData = [
-  { year: "2019", eventName: "Event name.", eventData: "Event data ." },
-  { year: "2020", eventName: "Event name.", eventData: "Event data ." },
-  { year: "2021", eventName: "Event name.", eventData: "Event data ." },
-  { year: "2022", eventName: "Event name.", eventData: "Event data ." },
-  { year: "2023", eventName: "Event name.", eventData: "Event data ." },
-  { year: "2024", eventName: "Event name.", eventData: "Event data ." },
+import React, { useState } from 'react';
+import './Timeline.css';  // Make sure your CSS file is correctly linked
+
+const events = [
+  {
+    id: 1,
+    name: 'Event 1',
+    details: 'Details about event 1',
+    description: 'Here is more detailed information about Event 1...',
+  },
+  {
+    id: 2,
+    name: 'Event 2',
+    details: 'Details about event 2',
+    description: 'Here is more detailed information about Event 2...',
+  },
+  {
+    id: 3,
+    name: 'Event 3',
+    details: 'Details about event 3',
+    description: 'Here is more detailed information about Event 3...',
+  },
+  // Add more events as needed
 ];
 
-// Function to create the timeline dynamically
-function createTimeline() {
-  // Create the main timeline container
-  const timelineContainer = document.createElement("div");
-  timelineContainer.className = "timeline";
-  
-  // Loop through each timeline entry
-  timelineData.forEach((item, index) => {
-    // Create a container for each event
-    const containerDiv = document.createElement("div");
-    containerDiv.className = `container ${index % 2 === 0 ? 'left' : 'right'}`; // Alternate left/right classes
+const Timeline = () => {
+  return (
+    <div className="timeline-container">
+      <h1 className="timeline-heading">Timeline</h1>  {/* Add Heading Here */}
 
-    // Create the content container
-    const contentDiv = document.createElement("div");
-    contentDiv.className = "content";
+      <div className="timeline">
+        <div className="timeline-line"></div> {/* Yellow Line */}
 
-    // Year heading
-    const yearHeading = document.createElement("h2");
-    yearHeading.textContent = item.year;
+        {events.map((event, index) => (
+          <div
+            className={`timeline-event ${index % 2 === 0 ? 'left' : 'right'}`}
+            key={event.id}
+          >
+            <div className="timeline-card">
+              <h2>{event.name}</h2>
+              <p>{event.details}</p>
+              <div className="event-hover">
+                <button>View Description</button>
+              </div>
+              <div className="event-description">
+                <h3>{event.name} Description</h3>
+                <p>{event.description}</p>
+                <button className="register-btn">Register</button>
+              </div>
+            </div>
+            <div className="timeline-pin"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-    // Event name div
-    const eventDiv = document.createElement("div");
-    eventDiv.className = "myDIV";
-    eventDiv.textContent = item.eventName;
-
-    // Event data div (initially hidden)
-    const eventDataDiv = document.createElement("div");
-    eventDataDiv.className = "hide";
-    eventDataDiv.textContent = item.eventData;
-
-    // Append elements in the structure
-    contentDiv.appendChild(yearHeading);
-    contentDiv.appendChild(eventDiv);
-    contentDiv.appendChild(eventDataDiv);
-    containerDiv.appendChild(contentDiv);
-    timelineContainer.appendChild(containerDiv);
-  });
-
-  // Append the full timeline to the body
-  document.body.appendChild(timelineContainer);
-}
-
-// Call the function to create the timeline on page load
-document.addEventListener("DOMContentLoaded", createTimeline);
+export default Timeline;

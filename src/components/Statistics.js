@@ -5,13 +5,13 @@ import './Statistics.css';
 const Statistics = () => {
     const [members, setMembers] = useState(0);
     const [events, setEvents] = useState(0);
-    const [partners, setPartners] = useState(0);
+    const [workshops_seminars, setPartners] = useState(0);
 
     useEffect(() => {
         const increment = setInterval(() => {
             setMembers((prev) => Math.min(prev + 1, 220));
-            setEvents((prev) => Math.min(prev + 1, 30));
-            setPartners((prev) => Math.min(prev + 1, 10));
+            setEvents((prev) => Math.min(prev + 1, 75));
+            setPartners((prev) => Math.min(prev + 1, 100));
         }, 50); // Adjust the speed here
         return () => clearInterval(increment);
     }, []);
@@ -29,8 +29,8 @@ const Statistics = () => {
                     <p>Events Conducted</p>
                 </div>
                 <div className="card stat-card">
-                    <h3 className="count-up">{partners}</h3>
-                    <p>Partners</p>
+                    <h3 className="count-up">{workshops_seminars}</h3>
+                    <p>Workshops & Seminars</p>
                 </div>
             </div>
         </div>

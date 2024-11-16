@@ -3,12 +3,16 @@ import React, { useState, useEffect } from 'react';
 import './Gallery.css';
 
 const images = [
-  "/images/gallery1.jpg",
-  "/images/gallery2.jpg",
-  "/images/gallery3.jpg",
-  "/images/gallery1.jpg",
-  "/images/gallery2.jpg",
-  // Add your image paths here
+  "/gallery/910.jpg",
+  "/gallery/g9.jpg",
+  "/gallery/g11.jpg",
+  "/gallery/g12.jpg",
+  "/gallery/g1.jpg",
+  "/gallery/g7.jpg",
+  "/gallery/g8.jpg",
+  "/gallery/g4.jpg",
+  "/gallery/g5.jpg",
+  
 ];
 
 const Gallery = () => {

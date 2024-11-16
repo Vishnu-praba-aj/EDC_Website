@@ -2,14 +2,14 @@ import React from "react";
 import "./Credits.css";
 
 const teamMembers = [
-    { name: "Abirami", role: "Frontend Development" },
-    { name: "Aruna Devi", role: "Frontend Developer" },
-    { name: "Vishnu Praba A J", role: "Frontend Developer" },
-    { name: "Maria Lopez", role: "Project Manager" },
-    {name: "Vishnu Praba A J", role: "Web development"},
-    { name: "Alex Johnson", role: "UI/UX Designer" },
-    { name: "Maria Lopez", role: "Project Manager" },
-    {name: "Vishnu Praba A J", role: "Web development"},
+    { name: "Abirami"},
+    { name: "Aruna Devi" },
+    { name: "Vishnu Praba A J"},
+    { name: "Vijay Srinivas" },
+    {name: "Vishnu Praba A J"},
+    { name: "Alex Johnson" },
+    { name: "Maria Lopez" },
+    {name: "Vishnu Praba A J"},
     // Add more team members as needed
 ];
 
@@ -21,7 +21,7 @@ const Credits = () => {
             <ul className="credits-list">
                 {teamMembers.map((member, index) => (
                     <li key={index} className="credit-item">
-                        <span className="credit-name">{member.name}</span> - {member.role}
+                        <span className="credit-name">{member.name}</span>  {member.role}
                     </li>
                 ))}
             </ul>
