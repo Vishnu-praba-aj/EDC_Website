@@ -81,7 +81,7 @@ function App({ homeRef,eventsRef, speakersRef, committeeRef, contactRef, scrollT
 
       <div ref={homeRef} className='picture-description-container'>
         <img src={'images/hero1.jpeg'} className='Entrepreneur-pic' alt="entreprenuer-image"></img>
-        <p className='LakshayaText'>LAKSHAYA</p>
+        <p className='LakshayaText'>LAKSHYA</p>
         {<p className='Description'>Unleasing Ideas, Igniting Entrepreneurs.</p>}
       </div>
 
