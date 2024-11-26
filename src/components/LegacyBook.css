@@ -1,0 +1,155 @@
+/* General Container Styling */
+.legacy-book-container {
+  font-family: "Arial", sans-serif;
+  color: #ffd700;
+  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+  background-image: url("D:/Desktop/edc-website/public/images/image.jpg"); /* Correct path to your image */
+  background-repeat: repeat;
+  background-size: auto; /* Scale image to cover the container */
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1; /* Ensure the content is above the pseudo-element */
+}
+
+.legacy-book-container::before {
+  content: ""; /* Required to make pseudo-element visible */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+  z-index: -1; /* Place behind the content */
+}
+
+
+/* Title Styling */
+.book-title {
+  text-align: center;
+  font-size: 3em;
+  margin: 20px 0 40px;
+  color: #ffd700;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Year Navigation Styling */
+.year-navigation {
+  position: fixed;
+  top: 120px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border: 5px solid yellow; /* Add yellow border */
+}
+
+
+.year-item {
+  color: #efe087;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.year-item:hover {
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Main Content Styling */
+.main-content {
+  margin-left: 50px; /* Adjust to make space for year navigation */
+  padding: 20px;
+  background-color:transparent;
+}
+
+/* Year Header Styling */
+.year-header {
+  text-align: center;
+  margin: 50px 0 30px;
+  font-size: 2.5em;
+  color: #efe087;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Back Button Styling */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #ffd700;
+  color: rgb(0, 0, 0.7);
+  border: none;
+  padding: 0.5rem 1rem; /* Reduced padding for a smaller button */
+  cursor: pointer;
+  font-size: 0.875em; /* Smaller font size */
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+
+.back-button:hover {
+  background-color: #e6c200;
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.6);
+}
+
+/* Committee Styling (Integrated from Committee.css) */
+.committee {
+  text-align: center;
+  padding: 20px; /* No padding from previous section */
+  background-color: rgba(0, 0, 0, 0); /* Background color */
+  
+}
+
+.committee-card {
+  background-color: #222;
+  max-width: 210px;
+  height: 240px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+
+.committee-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.6);
+}
+
+.committee-photo {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-bottom: 3px solid #ffd700;
+}
+
+.committee-card:hover .committee-photo {
+  transform: scale(1.1);
+}
+
+.card-info {
+  padding: 10px 5px;
+}
+
+.card-info h3 {
+  margin: 5px 0 3px;
+  font-size: 1.2em;
+  color: #ffd700;
+}
+
+.card-info p {
+  font-size: 0.9em;
+  color: #cccccc;
+}

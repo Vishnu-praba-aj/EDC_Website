@@ -1,5 +1,6 @@
 
 import './Hero.css';
+import { useNavigate } from "react-router-dom";
 import React, { useRef,useEffect,useState } from 'react';
 
 
@@ -49,7 +50,12 @@ function App({ homeRef,eventsRef, speakersRef, committeeRef, contactRef, scrollT
     return () => clearInterval(interval);
   }, [eventName]);
 
-
+  const navigate = useNavigate();
+  
+  const handleButtonClick = () => {
+    navigate("/register"); // Navigate to the register route
+  };
+  
 
   return (
     <div className='Background'>
@@ -75,9 +81,9 @@ function App({ homeRef,eventsRef, speakersRef, committeeRef, contactRef, scrollT
           {timeLeft.minutes.toString().padStart(2, '0')} : 
           {timeLeft.seconds.toString().padStart(2, '0')}
         </p>
-        <button className="register-button" style={{ cursor: 'pointer' }}>Register</button>
+        <button className="register-button" style={{ cursor: 'pointer' }} onClick={handleButtonClick}>Register</button>
         </div>
-      </div>
+      </div> 
 
       <div ref={homeRef} className='picture-description-container'>
         <img src={'images/hero1.jpeg'} className='Entrepreneur-pic' alt="entreprenuer-image"></img>

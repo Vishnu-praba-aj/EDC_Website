@@ -1,0 +1,38 @@
+.legacy-section {
+  text-align: center;
+  padding: 4rem;
+  background-color: rgba(0, 0, 0, 0.7);
+ 
+}
+
+  .legacy-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color:#ffd700
+  }
+  
+  .legacy-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    margin-left:3rem;
+    text-align:left
+  }
+  
+  .legacy-button {
+    background-color: #8a770d;
+    color: #fff;
+    padding: 1rem 2rem; /* Reduced padding for smaller size */
+    font-size: 0.875rem; /* Slightly smaller font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Optional: Set a maximum width if you want a consistent button size */
+    width: auto; /* Ensures the button adjusts based on content */
+  }
+  
+  
+  .legacy-button:hover {
+    background-color:#4d4f3a;
+    
+  }
+  

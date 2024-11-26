@@ -1,59 +1,64 @@
-import React, { useState } from 'react';
-import './Timeline.css';  // Make sure your CSS file is correctly linked
+import React, { useState } from "react";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa"; // For "More" icon
+import "./Timeline.css"; // Import the updated CSS
 
 const events = [
   {
-    id: 1,
-    name: 'Event 1',
-    details: 'Details about event 1',
-    description: 'Here is more detailed information about Event 1...',
+    title: "Event 1",
+    date: "January 2024",
+    description: "Short description of event 1.",
+    moreDetails: "Here are more details about Event 1, including background, speakers, and outcomes.",
   },
   {
-    id: 2,
-    name: 'Event 2',
-    details: 'Details about event 2',
-    description: 'Here is more detailed information about Event 2...',
+    title: "Event 2",
+    date: "February 2024",
+    description: "Short description of event 2.",
+    moreDetails: "Here are more details about Event 2, including highlights, sponsors, and key moments.",
   },
   {
-    id: 3,
-    name: 'Event 3',
-    details: 'Details about event 3',
-    description: 'Here is more detailed information about Event 3...',
+    title: "Event 3",
+    date: "March 2024",
+    description: "Short description of event 3.",
+    moreDetails: "More details about Event 3, such as speakers, special sessions, and audience feedback.",
   },
-  // Add more events as needed
 ];
 
-const Timeline = () => {
+function Timeline() {
+  const [expandedEventIndex, setExpandedEventIndex] = useState(null);
+
+  const handleMoreClick = (index) => {
+    setExpandedEventIndex(expandedEventIndex === index ? null : index);
+  };
+
   return (
     <div className="timeline-container">
-      <h1 className="timeline-heading">Timeline</h1>  {/* Add Heading Here */}
-
+      <h1 className="timeline-title">Event Timeline</h1>
       <div className="timeline">
-        <div className="timeline-line"></div> {/* Yellow Line */}
-
         {events.map((event, index) => (
           <div
-            className={`timeline-event ${index % 2 === 0 ? 'left' : 'right'}`}
-            key={event.id}
+            key={index}
+            className={`timeline-event ${index % 2 === 0 ? "left" : "right"}`}
           >
-            <div className="timeline-card">
-              <h2>{event.name}</h2>
-              <p>{event.details}</p>
-              <div className="event-hover">
-                <button>View Description</button>
-              </div>
-              <div className="event-description">
-                <h3>{event.name} Description</h3>
-                <p>{event.description}</p>
-                <button className="register-btn">Register</button>
-              </div>
+            <div className="event-content">
+              <h2>{event.title}</h2>
+              <p className="event-date">{event.date}</p>
+              <p className="event-description">{event.description}</p>
+              {expandedEventIndex === index && (
+                <p className="event-details">{event.moreDetails}</p>
+              )}
+              <button className="more-btn" onClick={() => handleMoreClick(index)}>
+                {expandedEventIndex === index ? (
+                  <><FaArrowUp /> Show Less</>
+                ) : (
+                  <><FaArrowDown /> Show More</>
+                )}
+              </button>
             </div>
-            <div className="timeline-pin"></div>
           </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
 export default Timeline;

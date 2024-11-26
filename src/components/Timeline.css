@@ -1,194 +1,192 @@
-/* General Styles */
-
 /* Timeline Container */
+.timeline-container {
+  width: 100%;
+  margin: 0;
+  padding: 50px 0;
+  background-color: rgba(0,0, 0, 0.7);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Title */
+.timeline-title {
+  text-align: center;
+  font-size: 3rem; /* Bigger title */
+  margin-bottom: 60px; /* More space below the title */
+  color: #ffd700; /* Glowing effect */
+  
+}
+
+/* Timeline */
 .timeline {
   position: relative;
-  max-width: 1500px;
-  margin: 0px;
-  padding: 0px;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.timeline-container {
-  padding: 0px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.timeline-heading {
-  font-size: 2.5rem;
-  color: #ffcc00;  /* White color for the heading */
-  margin: 0px;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Vertical Timeline Line */
-.timeline-line {
-  position: absolute;
-  width: 6px;
-  background-color: yellow;  /* Yellow line */
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-/* Timeline Event Container */
-.timeline-event {
-  position: relative;
+  padding: 20px 0;
+  list-style: none;
+  margin: 0 auto;
+  width: 85%;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 0px;  /* Reduced margin-bottom */
-  padding: 10px;  /* Reduced padding */
-  align-items: center;  /* Center the content vertically */
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Left-side Events */
-.left {
-  justify-content: flex-start;
-  left: 150px;
-  margin-left: 0;
-}
-
-/* Right-side Events */
-.right {
-  justify-content: flex-end;
-  left: -160px;
-  margin-right: 0;
-}
-
-/* Event Card */
-.timeline-card {
-  background-color: #6d6804;  /* Dark background for the card */
-  color: white;  /* White text */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-  width: 300px;
-  height: 150px;
+/* Event Cards */
+.timeline-event {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  width:80%;
+  padding: 0 10px;
   position: relative;
-  z-index: 2;
-  overflow: hidden;  /* Ensure the card content is within bounds */
-  transition: box-shadow 0.3s ease;
-}
-
-/* Hover effect for cards */
-.timeline-card:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Event Button and Description */
-.event-hover {
-  display: none;
-  text-align: center;
-}
-
-.timeline-card:hover .event-hover {
-  display: block;
-}
-
-.event-hover button {
-  padding: 10px 20px;
-  background-color: #FF9F55;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.event-hover button:hover {
-  background-color: #e0883c;
-}
-
-/* Pin Dot on the Timeline */
-.timeline-pin {
-  position: absolute;
-  top: 50%;
-  width: 12px;
-  height: 12px;
-  background-color: yellow;  /* Yellow dot */
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-/* For left side events, the pin is centered on the line */
-.left .timeline-pin {
-  left: 36.95%; /* This positions the pin for the left side */
-}
-
-/* For right side events, the pin is aligned on the right side of the line */
-.right .timeline-pin {
-  left: 64%; /* This positions the pin for the right side */
-}
-
-
-/* Event Description Box */
-.event-description {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #c48d18;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  z-index: 3;
-  display: none;  /* Initially hidden */
-  text-align: center;  /* Center the content */
+  transition: all 0.4s ease-in-out;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  animation: fadeIn 0.8s ease-in-out forwards;
 }
 
-/* Show description and register button when card is hovered */
-.timeline-card:hover .event-description {
-  display: block;
-  padding: 0px;
-  margin: 10px 10px;
-  opacity: 1;
+/* Alternating Event Cards */
+.timeline-event.left {
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  left: -17%;
+  animation: slideLeft 1s ease-out forwards;
 }
 
-/* Register Button inside Event Description */
-.register-btn {
-  margin-top: -20px;
-  padding: 5px 20px;
-  background-color: #FF9F55;
-  color: white;
-  border: none;
-  border-radius: 5px;
+.timeline-event.right {
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  position: relative;
+  right: -17%;
+  animation: slideRight 1s ease-out forwards;
+}
+
+/* Event Content */
+.event-content {
+  background: #333; /* Slightly darker background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 40%;
+  transition: all 0.4s ease-in-out;
+  transform: scale(1);
+  z-index: 10; /* Ensure content stays above */
+}
+
+/* Hover Effect for Event Content */
+.event-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.register-btn:hover {
-  background-color: #e0883c;
+.event-content h2 {
+  font-size: 1.5rem; /* Bigger font size */
+  color: #ffd700;
+  text-shadow: 2px 2px 6px rgba(255, 215, 0, 0.5); /* Glowing effect */
+  margin-bottom: 10px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .timeline {
-    padding: 20px 10px;
-  }
+.event-date {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
 
-  .timeline-event {
-    flex-direction: column;
-    align-items: center;
-  }
+.event-description {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 20px;
+}
 
-  .left,
-  .right {
-    justify-content: center;
-  }
+/* Event Details (Show More) */
+.event-details {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 20px;
+}
 
-  .timeline-card {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+/* More Button */
+.more-btn {
+  padding: 10px 20px;
+  background-color: #8a770d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
 
-  .event-description {
-    width: 90%;
+.more-btn:hover {
+  background-color: #ffcc00;
+  transform: translateY(-3px); /* Slight hover lift */
+}
+
+.more-btn:focus {
+  outline: none;
+}
+
+/* Vertical Line (Centered) */
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #ffd700;
+  transform: translateX(-50%);
+  animation: glowingLine 1.5s ease-in-out infinite; /* Glowing effect */
+}
+
+/* Glowing Line Animation */
+@keyframes glowingLine {
+  0% {
+    background-color: #ffd700;
+  }
+  50% {
+    background-color: #ffcc00;
+  }
+  100% {
+    background-color: #ffd700;
+  }
+}
+
+/* Slide-in Animations */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for Fade-in Effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
