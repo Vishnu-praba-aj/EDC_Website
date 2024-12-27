@@ -18,6 +18,7 @@ import TeamAccordion from "./components/TeamAccordion";
 import Login from "./components/Login"; // Login Page
 import Regform from "./components/Regform"; // Register Form
 import Admin from "./components/Admin"; // Admin Page
+import Verticals from "./components/Verticals";
 import "./App.css";
 
 function App() {
@@ -63,9 +64,11 @@ function App() {
                 </div>
                 
                 <Committee />
-                <TeamAccordion />
+                <Verticals/>
+                
                 <Legacy /> {/* New Legacy Section */}
                 <Gallery />
+                
                 <Achievements />
                 <div ref={contactRef}>
                   <Contact />

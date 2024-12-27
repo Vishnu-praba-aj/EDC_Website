@@ -20,15 +20,15 @@ const Statistics = () => {
         <div className="section stats">
             <h2>Our Impact</h2>
             <div className="stats-cards">
-                <div className="card stat-card">
+                <div className=" stat-card">
                     <h3 className="count-up">{members}</h3>
                     <p>Members</p>
                 </div>
-                <div className="card stat-card">
+                <div className=" stat-card">
                     <h3 className="count-up">{events}</h3>
                     <p>Events Conducted</p>
                 </div>
-                <div className="card stat-card">
+                <div className=" stat-card">
                     <h3 className="count-up">{workshops_seminars}</h3>
                     <p>Workshops & Seminars</p>
                 </div>

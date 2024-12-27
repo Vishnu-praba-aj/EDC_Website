@@ -32,10 +32,14 @@ body {
 }
 
 .section {
-  margin: 0;
-  padding: 90px;
-  background-color: rgba(0, 0, 0, 0.7);/* Ensure transparent background */
+  margin: 0; /* Remove any margin that might restrict the section */
+  padding: 90px; /* Padding as desired */
+  background: rgba(0, 0, 0, 0.7); /* Transparent black background with 70% opacity */
+  width: 100%; /* Ensures the section consumes the full width */
+  min-height: 100vh; /* Makes the section take at least the full height of the viewport */
+  box-sizing: border-box; /* Ensures padding is included in the section's total width */
 }
+
 
 .card {
   background: #222; /* Dark background for card */
