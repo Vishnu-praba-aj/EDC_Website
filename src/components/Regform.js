@@ -66,6 +66,7 @@ const Regform = () => {
     };
 
     return (
+        
         <div className="container">
             {/* Navigation with links */}
             <nav>
@@ -134,6 +135,7 @@ const Regform = () => {
                 </div>
             )}
         </div>
+        
     );
 };
 

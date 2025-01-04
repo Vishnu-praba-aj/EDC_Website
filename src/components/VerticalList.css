@@ -1,0 +1,102 @@
+/* VerticalList.css */
+
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the entire vertical list */
+.vertical-list-container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center;
+}
+
+/* Heading of the vertical list */
+.vertical-list-heading {
+  font-size: 3rem; /* Increased font size */
+  margin-bottom: 30px; /* Larger bottom margin */
+  color: #ffdd00; /* Bright yellow color for the heading */
+  font-weight: bold;
+}
+
+/* Grid layout with two rows */
+.vertical-list {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr); /* Create two rows of equal height */
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal-width columns */
+  gap: 20px; /* Space between each card */
+  padding: 0 20px;
+  width: 100%; /* Ensure container spans full width */
+  max-width: 1200px; /* Limit maximum width for better layout */
+}
+
+/* Styling individual vertical cards */
+.vertical-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Default box shadow for the cards */
+  width: 75%; /* Ensure card spans full width */
+  max-width: 400px; /* Limit max width of each card */
+  margin: 0 auto; /* Center the cards horizontally */
+}
+
+.vertical-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 15px rgba(255, 221, 0, 0.8); /* Bright yellow shadow on hover */
+}
+
+/* Emoji size for vertical card */
+.vertical-emoji {
+  font-size: 3rem; /* Increased font size for better visibility */
+}
+
+/* Name of the vertical with spacing and styling */
+.vertical-card .vertical-name {
+  margin: 15px 0;
+  font-size: 1rem !important; /* Force the font size change */
+  color: #ffdd00;
+  font-weight: bold;
+}
+
+/* Styling for the "Explore" button */
+.view-members-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color:#000 ;
+  color: #ffdd00;
+  border-color: #ffdd00;
+  
+  border-width:1px;
+  border-style: solid;
+  border-radius: 20px;;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-members-button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover for the button */
+}
+
+/* Make grid responsive on smaller screens */
+@media (max-width: 768px) {
+  .vertical-list {
+    grid-template-columns: 1fr; /* Stack vertically on small screens */
+  }
+}

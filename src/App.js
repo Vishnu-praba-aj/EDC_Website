@@ -14,11 +14,11 @@ import Speakers from "./components/Speakers";
 import Footer from "./components/Footer";
 import Legacy from "./components/Legacy"; // New Legacy Section
 import LegacyMembers from "./components/LegacyMembers"; // New Legacy Members Page
-import TeamAccordion from "./components/TeamAccordion";
 import Login from "./components/Login"; // Login Page
 import Regform from "./components/Regform"; // Register Form
 import Admin from "./components/Admin"; // Admin Page
-import Verticals from "./components/Verticals";
+import VerticalList from "./components/VerticalList";
+import VerticalDetails from './components/VerticalDetails';  // Import VerticalDetails
 import "./App.css";
 
 function App() {
@@ -36,7 +36,6 @@ function App() {
     <Router>
       <div className="App">
         {/* Navigation Bar */}
-        
 
         <Routes>
           {/* Main Page */}
@@ -62,13 +61,11 @@ function App() {
                 <div ref={committeeRef}>
                   <Faculty />
                 </div>
-                
+
                 <Committee />
-                <Verticals/>
-                
+                <VerticalList />
                 <Legacy /> {/* New Legacy Section */}
                 <Gallery />
-                
                 <Achievements />
                 <div ref={contactRef}>
                   <Contact />
@@ -78,11 +75,15 @@ function App() {
               </>
             }
           />
+          
           {/* Additional Routes */}
           <Route path="/legacy-members" element={<LegacyMembers />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Regform />} />
           <Route path="/admin" element={<Admin />} />
+          
+          {/* Route for VerticalDetails */}
+          <Route path="/vertical/:id" element={<VerticalDetails />} />
         </Routes>
       </div>
     </Router>

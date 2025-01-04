@@ -1,24 +1,22 @@
 /* Body Styling */
 body {
-    font-family: 'Roboto', sans-serif;
+    
+    background-color: rgba(0, 0, 0, 0.7);
     margin: 0;
     padding: 0;
-    background-color: black; /* Dark background */
-    color: white;
+    color: white; /* Ensures text remains visible on the darkened background */
 }
 
-/* Form Container */
-/* Form Container */
-/* Form Container */
+
 .container {
     width: 90%;
     max-width: 500px;
     margin: 50px auto;
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.9); /* Slight transparency for elegance */
-    border: 4px solid white; /* Changed to white */
+        border: 4px solid yellow !important;
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 5px 10px rgba(203, 203, 189, 0.2); /* Reduced glow effect */
+    box-shadow: 0 5px 10px rgba(243, 243, 239, 0.2); /* Reduced glow effect */
 }
 
 

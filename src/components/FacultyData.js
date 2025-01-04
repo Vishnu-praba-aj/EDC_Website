@@ -2,7 +2,7 @@
 
 const facultyData = [
     {
-      name: "Dr. ",
+      name: "Dr. Vimal Sam Singh",
       title: "Head of EDC",
       description: "Experienced mentor, dedicated to fostering entrepreneurship.",
       photo: "/faculty/f1.jpg" // Ensure this path is accurate for the image location

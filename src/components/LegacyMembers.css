@@ -20,7 +20,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
   z-index: -1; /* Place behind the content */
 }
 
@@ -67,7 +67,7 @@
 .main-content {
   margin-left: 50px; /* Adjust to make space for year navigation */
   padding: 20px;
-  background-color:transparent;
+  background-color: transparent;
 }
 
 /* Year Header Styling */
@@ -101,18 +101,19 @@
   box-shadow: 0 4px 8px rgba(255, 215, 0, 0.6);
 }
 
-/* Committee Styling (Integrated from Committee.css) */
-.committee {
-  text-align: center;
-  padding: 20px; /* No padding from previous section */
-  background-color: rgba(0, 0, 0, 0); /* Background color */
-  
+/* Styles for committee rows */
+.committee-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between cards */
+  margin-bottom: 30px;
 }
 
 .committee-card {
   background-color: #222;
-  max-width: 210px;
-  height: 240px;
+  max-width: 210px; /* Set width */
+  width: 100%;
+  height: 250px; 
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
@@ -127,29 +128,45 @@
   box-shadow: 0 10px 20px rgba(255, 215, 0, 0.6);
 }
 
-.committee-photo {
+.committee-photo1 {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
+  height: 200px; /* Set fixed height */
+  object-fit:cover;
   transition: transform 0.3s ease;
-  border-bottom: 3px solid #ffd700;
+  border-bottom: 2.5px solid #ffd700;
+  
 }
 
 .committee-card:hover .committee-photo {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .card-info {
-  padding: 10px 5px;
+  padding: 10px 5px; /* Padding reduced for better fit */
 }
 
 .card-info h3 {
   margin: 5px 0 3px;
-  font-size: 1.2em;
+  font-size: 1em;
   color: #ffd700;
 }
 
 .card-info p {
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #cccccc;
+}
+
+.back-button {
+  padding: 10px 20px;
+  background-color: #8a770d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width:10%;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #ffcc00;
 }

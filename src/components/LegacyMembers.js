@@ -1,24 +1,50 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./LegacyBook.css"; // Keep styles for page structure
-import "./Committee.css"; // Import styles for member cards
+import "./LegacyMembers.css"; // Keep styles for page structure
 
 const legacyData = {
   title: "Committee Chronicles",
   years: {
-    2020: [
-      { name: "John Doe", role: "Founder" },
-      { name: "Jane Smith", role: "Co-Founder" },
-    ],
-    2021: [
-      { name: "Robert Brown", role: "Team Lead" },
-      { name: "Emily Davis", role: "Marketing Head" },
-    ],
-    2022: [
-      { name: "Michael Wilson", role: "Operations Manager" },
-      { name: "Sophia Taylor", role: "Strategy Advisor" },
+    2023: [
+      { name: "Lakshmi Priya Anbarasu", role: "", 
+        linkedin: "https://www.linkedin.com/in/lakshmi-priya-anbarasu-490463206/", 
+        image: "Members_2023/lakshmi-priya-anbarasu1.jpg"
+      },
+      { name: "Abdurrahman Lalsudhesh", role: "", 
+        linkedin: "https://www.linkedin.com/in/abdurrahman-lalsudhesh-h/", 
+        image: "Members_2023/abdurrahman-lalsudhesh-h.jpg"
+      },
+      { name: "Suneeth Damodharan", role: "", 
+        linkedin: "https://www.linkedin.com/in/suneeth-damodharan-2537a81b9/", 
+        image: "Members_2023/Suneeth Damodharan.jpg"
+      },
+      { name: "Sai Sandeep", role: "", 
+        linkedin: "https://www.linkedin.com/in/kovi-sai-sandeep-7874a91b5/", 
+        image: "Members_2023/sai-sandeep.jpg"
+      },
+      { name: "Muthuvelan Mutharasu", role: "", 
+        linkedin: "https://www.linkedin.com/in/muthuvelan-mutharasu-766227261/", 
+        image: "Members_2023/muthuvelan-mutharasu.jpg"
+      },
+      { name: "Shri Thrisha", role: "", 
+        linkedin: "https://www.linkedin.com/in/shri-thrisha/", 
+        image: "Members_2023/shri-thrisha.jpg"
+      },
+      { name: "Jiiteash", role: "", 
+        linkedin: "https://www.linkedin.com/in/jiitesh/", 
+        image: "Members_2023/jiitesh.jpg"
+      },
     ],
   },
+};
+
+// Helper function to divide members into chunks of 4
+const chunkArray = (array, chunkSize) => {
+  let result = [];
+  for (let i = 0; i < array.length; i += chunkSize) {
+    result.push(array.slice(i, i + chunkSize));
+  }
+  return result;
 };
 
 function LegacyBook() {
@@ -29,15 +55,21 @@ function LegacyBook() {
   }, []);
 
   const goBackToLegacy = () => {
-    navigate("/#legacy");
+    navigate(-1);
+    setTimeout(() => {
+      const section = document.getElementById("legacy");
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   };
 
   return (
     <div className="legacy-book-container">
-      {/* Back Button
-      <button className="back-button" onClick={goBackToLegacy}>
-        ← Back
-      </button> */}
+      {/* Back Button */}
+      <button onClick={goBackToLegacy} className="back-button">
+        Back
+      </button>
 
       {/* Title */}
       <h1 className="book-title">{legacyData.title}</h1>
@@ -56,19 +88,25 @@ function LegacyBook() {
         {Object.keys(legacyData.years).map((year) => (
           <section id={year} key={year} className="year-section">
             <h2 className="year-header">Members of {year}</h2>
-            <div >
-              <div className="committee-row">
-                {legacyData.years[year].map((member, index) => (
+            {chunkArray(legacyData.years[year], 4).map((memberRow, index) => (
+              <div key={index} className="committee-row">
+                {memberRow.map((member, index) => (
                   <div key={index} className="committee-card">
-                    <div className="committee-photo"></div>
+                    {/* Member Image */}
+                    <div className="committee-photo1">
+                      <img src={member.image} alt={member.name} className="member-image" />
+                    </div>
                     <div className="card-info">
                       <h3>{member.name}</h3>
                       <p>{member.role}</p>
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                        LinkedIn
+                      </a>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
+            ))}
           </section>
         ))}
       </div>
