@@ -6,11 +6,11 @@ const teamMembers = [
     { name: "Aruna Devi" },
     { name: "Vishnu Praba A J"},
     { name: "Vijay Srinivas" },
-    {name: "Vishnu Praba A J"},
-    { name: "Alex Johnson" },
+    {name: "Amudhakavi S "},
+    { name: "U Pranaav " },
     { name: "Maria Lopez" },
-    {name: "Vishnu Praba A J"},
-    // Add more team members as needed
+    
+   
 ];
 
 const Credits = () => {

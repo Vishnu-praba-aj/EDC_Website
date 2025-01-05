@@ -91,7 +91,7 @@ function LegacyBook() {
             {chunkArray(legacyData.years[year], 4).map((memberRow, index) => (
               <div key={index} className="committee-row">
                 {memberRow.map((member, index) => (
-                  <div key={index} className="committee-card">
+                  <div key={index} className="committee-card1">
                     {/* Member Image */}
                     <div className="committee-photo1">
                       <img src={member.image} alt={member.name} className="member-image" />

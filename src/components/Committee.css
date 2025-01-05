@@ -26,7 +26,7 @@
   max-width: 210px; /* Set width */
   width: 100%;
   height: 210px; 
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
   text-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
