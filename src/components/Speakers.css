@@ -1,98 +1,103 @@
 
-  .Background {
-    background-color: rgba(0, 0, 0, 0.7);;
-    height: 100%;
-  }
-   
-  .innovative-speakers {
-    color: #ffd700;
-    display: flex; /* Ensures flexbox is applied */
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    margin: 0; /* Removes extra margin */
-    font-size: xx-large;
-    height: 50vh; /* Takes full viewport height to center vertically */
+.Background {
+  background-color: black;
+  height: 100%;
+}
+ 
+.innovative-speakers {
+  color: gold;
+  justify-content: center;
+  text-align:center;
+  padding-top: 100px;
+  font-size: xx-large;
+  padding-bottom:10px;
+
+  font-family: Cambria;
 }
 
-  
-  /* Carousel */
-  
-  .Body {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 50px;
-  }
-  
-  .card {
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    border: 2px solid rgb(0, 0, 0);
-    overflow: hidden;
-    position: relative;
-    margin-left: 40px;
-  }
-  
-  .card_image {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    border-radius: 10px;
-  }
-  
-  .card:hover .card-body {
-    right: 0px;
-  }
-  
-  .card-body {
-    height: 100%;
-    width: 100%;
-    background-color: #5462668f;
-    top: 0;
-    right: -100%;
-    position: absolute;
-    backdrop-filter: blur(3px);
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 1.5s;
-  }
-  
-  .person_name {
-    text-transform: uppercase;
-    font-size: 19px;
-    font-weight: 800;
-  }
-  
-  .person_description {
-    text-transform: capitalize;
-    font-weight: 550;
-    font-size: 15px;
-  }
-  
-  .short_description {
-    padding-top: 7px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  
-  .carousel .control-prev.control-arrow {
-    left: 10px;
-    z-index: 10;
-  }
-  
-  .carousel .control-next.control-arrow {
-    right: 10px;
-    z-index: 10;
-  }
-  
-  .carousel .control-prev.control-arrow:before,
-  .carousel .control-next.control-arrow:before {
-    font-size: 10px;
-    color: #ffffff;
-  }
-  
+/* Carousel */
+
+.Body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.speakercard {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  border: 2px solid goldenrod;
+  overflow: hidden;
+  position: relative;
+  margin-left: 40px;
+  background-color: black;
+}
+
+.card_image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.speakercard:hover .card-body {
+  right: 0px;
+}
+
+.card-body {
+  height: 100%;
+  width: 100%;
+  background-color: #5462668f;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 1.5s;
+}
+
+.person_name {
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 800;
+  color:black;
+}
+
+.person_description {
+  text-transform: capitalize;
+  font-weight: 550;
+  font-size: 15px;
+}
+
+.short_description {
+  padding-top: 7px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.carousel .control-prev.control-arrow {
+  left: 10px;
+  z-index: 10;
+  width: 50px;
+}
+
+.carousel .control-next.control-arrow {
+  right: 10px;
+  z-index: 10;
+  width: 50px;
+}
+
+.carousel .control-prev.control-arrow:before,
+.carousel .control-next.control-arrow:before {
+  font-size: 10px;
+  color: #ffffff;
+}
