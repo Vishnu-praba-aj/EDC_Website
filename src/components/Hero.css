@@ -80,6 +80,9 @@
   height:90px;
 }
 
+.EventName-display-container{
+  font-size: 50px;
+}
 .countdown-timer {
   text-align: center;
   font-size: 24px;
@@ -173,28 +176,60 @@
   margin-bottom: 20px;
 }
 
-.AboutUs-container{
+.AboutUs-container {
   padding: 20px;
+  background: linear-gradient(to bottom, #000000, #1a1a1a);
+  border-radius: 10px;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  
+  animation: fadeIn 2s ease-in-out;
 }
 
+
+
 .AboutUs {
-  
   color: gold;
-  width:100%;
   justify-content: center;
   text-align: center;
   padding-top: 80px;
-  font-size: xx-large;
-  padding-bottom:10px;
-  /*padding-left: 50%;*/
-  font-family: Cambria;
-  
+  font-size: 2rem; /* Adjusted size */
+  padding-bottom: 10px;
+  font-family: 'Cambria', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.AboutUs-content
-{
-  font-size: x-large;
+.AboutUs-content {
+  font-size: 1.2rem;
+  width:90%;
+  margin-left: 90px;
   color: azure;
   padding-left: 10px;
   padding-right: 10px;
+  line-height: 1.8;
+  text-align: center;
+  opacity: 1;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); /* Add shadow around content */
+  border-radius: 10px; /* Optional for smoother edges */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.AboutUs-content:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 12px gold; /* Enhance shadow on hover */
+}
+
+
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
