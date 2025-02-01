@@ -1,9 +1,11 @@
 /* src/components/Committee.css */
 
 .committee {
+  min-width:100vh;
   text-align: center;
-  padding: 0; /* No padding from previous section */
-  background-color: rgba(0, 0, 0, 0.2); /* Background color */
+  padding-top:5%;
+  padding-bottom: 5%;  /* No padding from previous section */
+  background-color: rgba(0, 0, 0, 0.6); /* Background color */
   margin: 0;
 }
 

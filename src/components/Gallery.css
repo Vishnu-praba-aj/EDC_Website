@@ -1,8 +1,10 @@
 /* src/components/Gallery.css */
 
 .gallery-container {
+  min-width: 100vh;
   text-align: center;
-  padding: 40px 20px;
+  padding-top:5%;
+  padding-bottom:5%;
   background-color: #0d0d0d; /* Dark background */
   overflow: hidden; /* Prevent overflow of the container */
 }
@@ -45,4 +47,5 @@
 .instruction {
   color: #ccc;
   margin-top: 15px;
+  font-size: 10px;
 }

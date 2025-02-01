@@ -17,7 +17,7 @@ const Statistics = () => {
     }, []);
 
     return (
-        <div className="section stats">
+        <div className="stats">
             <h2>Our Impact</h2>
             <div className="stats-cards">
                 <div className=" stat-card">

@@ -1,7 +1,10 @@
 /* src/components/Faculty.css */
 .faculty {
+    min-width:100vh;
     text-align: center;
-    padding: 40px 0;
+    padding-top:2vh;
+    padding-bottom:5%;
+    background-color: rgba(0, 0, 0, 0.6);
   }
   
   .faculty h2 {

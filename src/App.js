@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Hero from "./components/Hero.js";
-import Events from "./components/Events";
+
 import Timeline from "./components/Timeline.js";
 import Statistics from "./components/Statistics";
 import Faculty from "./components/Faculty";
@@ -19,6 +19,7 @@ import Regform from "./components/Regform"; // Register Form
 import Admin from "./components/Admin"; // Admin Page
 import VerticalList from "./components/VerticalList";
 import VerticalDetails from './components/VerticalDetails';  // Import VerticalDetails
+
 import "./App.css";
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
                   scrollToSection={scrollToSection}
                 />
                 <Statistics />
+                
                 <div ref={eventsRef}>
                   <Timeline />
                 </div>

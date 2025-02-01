@@ -5,7 +5,7 @@ import './Faculty.css';
 
 const Faculty = () => {
     return (
-        <div className="section faculty">
+        <div className="faculty">
             <h2>Faculty Coordinators</h2>
             <div className="faculty-cards">
                 {facultyData.map((faculty, index) => (

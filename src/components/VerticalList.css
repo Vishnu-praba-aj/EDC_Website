@@ -1,17 +1,13 @@
 /* VerticalList.css */
 
-body {
-  background-color: #000;
-  color: #fff;
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
 
 /* Container for the entire vertical list */
-.vertical-list-container {
+.vertical-list-container1 {
+  min-width:100vh;
   text-align: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+  padding-top:5%;
+  padding-bottom:5%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background with transparency */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,7 +18,6 @@ body {
 /* Heading of the vertical list */
 .vertical-list-heading {
   font-size: 3rem; /* Increased font size */
-  margin-bottom: 30px; /* Larger bottom margin */
   color: #ffdd00; /* Bright yellow color for the heading */
   font-weight: bold;
 }
@@ -33,7 +28,6 @@ body {
   grid-template-rows: repeat(2, 1fr); /* Create two rows of equal height */
   grid-template-columns: repeat(4, 1fr); /* Create 4 equal-width columns */
   gap: 20px; /* Space between each card */
-  padding: 0 20px;
   width: 100%; /* Ensure container spans full width */
   max-width: 1200px; /* Limit maximum width for better layout */
 }

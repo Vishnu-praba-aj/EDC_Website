@@ -228,7 +228,7 @@ const verticalsData = [
             { 
               name: "Vishnu Praba A J", 
               role: "Deputy Head", 
-              image: "https://via.placeholder.com/100", 
+              image: "https://via.placeholder.com/100",
               department: "III CSE"
             },
           ],

@@ -66,14 +66,17 @@ const Regform = () => {
     };
 
     return (
-        
+    
         <div className="container">
             {/* Navigation with links */}
+           
+
+            <div className="text">Registration Form</div>
+            <div >
             <nav>
                 <Link to="/login">Login</Link> | <Link to="/register">Register</Link>
             </nav>
-
-            <div className="text">Registration Form</div>
+            </div>
             <form onSubmit={handleSubmit}>
                 <div className="input-data">
                     <input type="text" name="name" required placeholder=" " />

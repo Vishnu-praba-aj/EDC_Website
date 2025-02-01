@@ -1,8 +1,11 @@
 /* Timeline Container */
 .timeline-container{
+  min-width:100vh;
   width: 100%;
   margin-top: 0;
   padding: 50px 0;
+  padding-top:5%;
+  padding-bottom:5%;
   background-color: rgba(0,0, 0, 0.7);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -12,7 +15,7 @@
 /* Title */
 .timeline-title {
   text-align: center;
-  font-size: 3rem; /* Bigger title */
+  font-size: 2rem; /* Bigger title */
   margin-bottom: 60px; /* More space below the title */
   color: #ffd700; /* Glowing effect */
   

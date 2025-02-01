@@ -1,6 +1,7 @@
 
 import './Hero.css';
 import React, { useRef,useEffect,useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -49,7 +50,10 @@ function App({ homeRef,eventsRef, speakersRef, committeeRef, contactRef, scrollT
     return () => clearInterval(interval);
   }, [eventName]);
 
-
+  const navigate = useNavigate();
+  const handleButtonClick = () => {
+    navigate("/register");
+  };
 
   return (
     <div className='Background'>
@@ -75,7 +79,7 @@ function App({ homeRef,eventsRef, speakersRef, committeeRef, contactRef, scrollT
           {timeLeft.minutes.toString().padStart(2, '0')} : 
           {timeLeft.seconds.toString().padStart(2, '0')}
         </p>
-        <button className="register-button" style={{ cursor: 'pointer' }}>Register</button>
+        <button className="register-button" style={{ cursor: 'pointer' }} onClick={handleButtonClick}>Register</button>
         </div>
       </div>
 

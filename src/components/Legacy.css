@@ -1,7 +1,9 @@
 .legacy-section {
   text-align: center;
-  padding: 4rem;
-  background-color: rgba(0, 0, 0, 0.7);
+  padding-top:3%;
+  padding-bottom:5%;
+  background-color: rgba(0, 0, 0, 0.6);
+  min-width: 100vh;
  
 }
 
@@ -12,8 +14,10 @@
   }
   
   .legacy-section p {
-    font-size: 1.2rem;
+    font-size: medium;
     margin-bottom: 2.5rem;
+    padding-left:10%;
+    padding-right:10%;
     margin-left:3rem;
     text-align:left
   }

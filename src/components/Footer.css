@@ -3,7 +3,7 @@
   padding: 20px;
   text-align: center;
   color: #fff;
-  
+  min-width: 100vh;
 }
 
 .footer .social-icons {

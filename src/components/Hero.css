@@ -18,7 +18,12 @@
 
 .Background {
   background-color: black;
+  min-height: 100vh;
+  min-width:100vh;
   height: 100%;
+  padding-top:5%;
+  padding-bottom:5%;
+ 
 }
 
 .Header_fieldset {
@@ -233,3 +238,4 @@
     transform: translateX(0);
   }
 }
+

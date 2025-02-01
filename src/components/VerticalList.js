@@ -15,7 +15,7 @@ const verticals = [
 
 const VerticalList = () => {
   return (
-    <div id="vertical-list-section" className="vertical-list-container">
+    <div id="vertical-list-section" className="vertical-list-container1">
       <h2 className="vertical-list-heading">Verticals</h2>
       <div className="vertical-list">
         {verticals.map((vertical) => (

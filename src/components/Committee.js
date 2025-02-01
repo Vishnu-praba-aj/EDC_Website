@@ -14,7 +14,7 @@ const Committee = () => {
   const membersRow2 = members.slice(4, 8);
 
   return (
-    <div className="section committee">
+    <div className=" committee">
       <h2>Meet the Committee</h2>
 
 

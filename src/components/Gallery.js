@@ -56,7 +56,7 @@ const Gallery = () => {
           </div>
         ))}
       </div>
-      <p className="instruction">Hover over a corner image to view it!</p>
+      <p className="instruction">Hover</p>
     </div>
   );
 };
