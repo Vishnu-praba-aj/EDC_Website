@@ -8,7 +8,7 @@
   }
   
   .faculty h2 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #ffd700;
     margin-bottom: 30px;
   }
@@ -85,3 +85,29 @@
     padding: 10px !important;
   }
   
+  @media (max-width: 768px) {
+    .faculty-card {
+        width: 280px; /* Reduce width for smaller screens */
+        padding: 10px;
+    }
+
+    .faculty-info {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .faculty-info h3 {
+        font-size: 1.2em !important;
+    }
+
+    .faculty-info h4 {
+        font-size: 1.1em !important;
+    }
+
+    .faculty-info p {
+        font-size: 0.85em !important;
+    }
+
+    .faculty-photo {
+        max-height: 200px; /* Reduce image height for mobile */
+    }
+}

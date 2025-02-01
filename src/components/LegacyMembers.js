@@ -66,10 +66,10 @@ function LegacyBook() {
 
   return (
     <div className="legacy-book-container">
-      {/* Back Button */}
+      {/* Back Button 
       <button onClick={goBackToLegacy} className="back-button">
         Back
-      </button>
+      </button>*/}
 
       {/* Title */}
       <h1 className="book-title">{legacyData.title}</h1>

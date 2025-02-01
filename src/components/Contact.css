@@ -1,12 +1,12 @@
 .contact {
     background-color: #090805;
     color: #e0e6ed;
-    padding-top:5%;
-    padding-bottom:5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     border-top: 3px solid #ffd700;
     font-family: 'Arial', sans-serif;
-    margin:0;
-    min-width:100vb;
+    margin: 0;
+    min-width: 100vw;
 }
 
 .contact-container {
@@ -73,12 +73,6 @@
     height: 100px;
 }
 
-.form-input:focus, .form-textarea:focus {
-    outline: none;
-    border-color: #ffd700;
-    box-shadow: 0 0 3px rgba(255, 215, 0, 0.5);
-}
-
 .form-button {
     padding: 8px 16px; /* Reduced padding for a smaller button */
     border: none;
@@ -91,9 +85,9 @@
     font-weight: bold;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a slight shadow for depth */
     width: 200px;
-    height:45px;
+    height: 45px;
     align-self: flex-end;
-    font-style:italic
+    font-style: italic;
 }
 
 .form-button:hover {
@@ -102,10 +96,11 @@
 }
 
 /* Responsive Design */
-@media (max-width: 800px) {
+@media (max-width: 786px) {
     .contact-container {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
 
     .contact h2 {
@@ -119,9 +114,15 @@
     .form-input, .form-textarea {
         max-width: 100%; /* Ensures full-width on smaller screens */
     }
+
+    .form-button {
+        width: 100%; /* Make button full width on smaller screens */
+        height: 50px; /* Adjust height */
+    }
 }
+
 /* Mobile View (max-width: 480px) */
-@media (max-width: 480px) {
+@media (max-width: 786px) {
     .contact {
         padding: 10% 5%;
     }
@@ -147,7 +148,7 @@
     }
 
     .form-input, .form-textarea {
-        font-size: 1em;
+        font-size: 1.1em; /* Slightly larger font size for easier reading */
         padding: 10px;
         border-radius: 15px;
         width: 100%;

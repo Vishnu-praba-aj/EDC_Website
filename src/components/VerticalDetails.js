@@ -8,6 +8,11 @@ const VerticalDetails = () => {
   const vertical = verticalsData.find(v => v.id === parseInt(id));
   const navigate = useNavigate();
 
+  // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
+
   const goBackToSection = () => {
     navigate(-1);
     setTimeout(() => {
@@ -33,43 +38,43 @@ const VerticalDetails = () => {
 
         {/* Head Section */}
         <div className="card-row">
-        <div className="committee-card">
-          <img src={vertical.head.image} alt={vertical.head.name} className="card-image" />
-          <div className="card-info">
-            <h3>{vertical.head.name}</h3>
-            <p>{vertical.head.role}</p>
-            <p>{vertical.head.department}</p>
+          <div className="committee-card">
+            <img src={vertical.head.image} alt={vertical.head.name} className="card-image" />
+            <div className="card-info">
+              <h3>{vertical.head.name}</h3>
+              <p>{vertical.head.role}</p>
+              <p>{vertical.head.department}</p>
+            </div>
           </div>
         </div>
-        </div>
+
         {/* Deputies in the same row */}
-<div className="card-row">
-  {vertical.deputies.map((deputy, idx) => (
-    <div className={id === "3" ? "committee-card with-image" : "committee-card without-image"} key={idx}>
-      {id === "3" && <img src={deputy.image} alt={deputy.name} className="card-image" />}
-      <div className="card-info">
-        <h3>{deputy.name}</h3>
-        <p>{deputy.role}</p>
-        <p>{deputy.department}</p>
-      </div>
-    </div>
-  ))}
-</div>
+        <div className="card-row">
+          {vertical.deputies.map((deputy, idx) => (
+            <div className={id === "3" ? "committee-card with-image" : "committee-card without-image"} key={idx}>
+              {id === "3" && <img src={deputy.image} alt={deputy.name} className="card-image" />}
+              <div className="card-info">
+                <h3>{deputy.name}</h3>
+                <p>{deputy.role}</p>
+                <p>{deputy.department}</p>
+              </div>
+            </div>
+          ))}
+        </div>
 
-{/* Members below deputies */}
-<div className="card-row members-row">
-  {vertical.members.map((member, idx) => (
-    <div className={id === "3" ? "committee-card with-image" : "committee-card without-image"} key={idx}>
-      {id === "3" && <img src={member.image} alt={member.name} className="card-image" />}
-      <div className="card-info">
-        <h3>{member.name}</h3>
-        <p>{member.role}</p>
-        <p>{member.department}</p>
-      </div>
-    </div>
-  ))}
-</div>
-
+        {/* Members below deputies */}
+        <div className="card-row members-row">
+          {vertical.members.map((member, idx) => (
+            <div className={id === "3" ? "committee-card with-image" : "committee-card without-image"} key={idx}>
+              {id === "3" && <img src={member.image} alt={member.name} className="card-image" />}
+              <div className="card-info">
+                <h3>{member.name}</h3>
+                <p>{member.role}</p>
+                <p>{member.department}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

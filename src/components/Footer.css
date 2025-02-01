@@ -9,7 +9,7 @@
 .footer .social-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px; /* Reduced space between icons for a more compact layout */
   margin-bottom: 10px;
 }
 
@@ -42,4 +42,35 @@
 /* Hover Effects */
 .social-link:hover {
   transform: scale(1.2);
+}
+
+/* Responsive Design for mobile */
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 10px; /* Reduce gap between icons on smaller screens */
+  }
+
+  .social-link {
+    font-size: 1.6em; /* Slightly reduce icon size on mobile */
+  }
+
+  .footer-text {
+    font-size: 0.9em; /* Slightly reduce the text size for mobile */
+  }
+}
+
+/* Further Adjustment for Very Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .social-link {
+    font-size: 1.5em; /* Reduce the icon size for very small screens */
+  }
+
+  .footer-text {
+    font-size: 0.8em; /* Reduce text size for very small screens */
+  }
+
+  /* Preventing WhatsApp icon from merging with the right edge */
+  .footer .social-icons {
+    padding-right: 10px; /* Add padding on the right to prevent merging */
+  }
 }

@@ -1,42 +1,71 @@
+/* src/components/Legacy.css */
 .legacy-section {
+  display: flex;
+  flex-direction: column; /* Ensures vertical stacking */
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
   text-align: center;
-  padding-top:3%;
-  padding-bottom:5%;
+  padding-top: 3%;
+  padding-bottom: 5%;
   background-color: rgba(0, 0, 0, 0.6);
-  min-width: 100vh;
- 
+  min-width: 100vw; /* Ensures it spans full width */
 }
 
+.legacy-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.legacy-section p {
+  font-size: medium;
+  margin-bottom: 2.5rem;
+  padding: 0 10%; /* Balanced padding */
+  text-align: center;
+}
+
+/* Button Fix */
+.legacy-button {
+  background-color: #8a770d;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  display: block;
+  text-align: center;
+  margin: 0 auto; /* Centers the button */
+}
+
+.legacy-button:hover {
+  background-color: #ffcc00;
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 768px) {
+  .legacy-section {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
   .legacy-section h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    color:#ffd700
   }
-  
+
   .legacy-section p {
-    font-size: medium;
-    margin-bottom: 2.5rem;
-    padding-left:10%;
-    padding-right:10%;
-    margin-left:3rem;
-    text-align:left
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    padding: 0 5%;
+    text-align: center;
   }
-  
+
   .legacy-button {
-    background-color: #8a770d;
-    color: #fff;
-    padding: 1rem 2rem; /* Reduced padding for smaller size */
-    font-size: 0.875rem; /* Slightly smaller font size */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    /* Optional: Set a maximum width if you want a consistent button size */
-    width: auto; /* Ensures the button adjusts based on content */
+    width: fit-content; /* Prevents button from taking extra width */
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    margin: 0 auto; /* Ensures centering */
   }
-  
-  
-  .legacy-button:hover {
-    background-color:#ffcc00;
-    
-  }
-  
+}

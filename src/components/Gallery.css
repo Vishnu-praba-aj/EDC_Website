@@ -1,51 +1,89 @@
 /* src/components/Gallery.css */
 
 .gallery-container {
-  min-width: 100vh;
+  width: 100%;
   text-align: center;
-  padding-top:5%;
-  padding-bottom:5%;
+  padding: 5% 2%;
   background-color: #0d0d0d; /* Dark background */
-  overflow: hidden; /* Prevent overflow of the container */
+  overflow: hidden;
 }
 
 .gallery-container h2 {
   color: #ffd700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .gallery-wrapper {
   display: flex;
-  transition: transform 1s ease; /* Smooth transition for image movement (slower) */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto; /* Allow scrolling for smaller screens */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  padding-bottom: 10px;
+  white-space: nowrap; /* Prevent images from stacking */
 }
 
 .gallery-item {
-  min-width: 300px; /* Minimum width of each image */
-  margin: 0 10px; /* Spacing between images */
+  flex: 0 0 auto; /* Prevents items from shrinking */
+  width: 280px; /* Adjust width for consistency */
+  max-width: 90%;
+  margin: 0 5px;
   position: relative;
-  transition: transform 0.5s ease; /* Smooth transition */
-  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.5s ease;
+  border-radius: 10px;
   overflow: hidden;
+  scroll-snap-align: center;
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
-  display: block; /* Remove bottom spacing */
-  border-radius: 10px; /* Match rounded corners */
+  display: block;
+  border-radius: 10px;
 }
 
 .gallery-item:hover {
-  z-index: 1; /* Bring the hovered image to the front */
+  z-index: 1;
+  transform: scale(1.05);
 }
 
+/* Fix Rotation on Hover */
 .gallery-item:first-child:hover,
 .gallery-item:last-child:hover {
-  transform: rotate(5deg); /* Rotate only the first and last images */
+  transform: rotate(3deg) scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .gallery-wrapper {
+    overflow-x: scroll; /* Allows horizontal scroll */
+    flex-wrap: nowrap; /* Keeps images in a row */
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+
+  .gallery-item {
+    width: 250px; /* Slightly smaller on mobile */
+  }
+}
+
+/* Ensure no extra blank space in laptop view */
+@media (min-width: 1024px) {
+  .gallery-wrapper {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .gallery-item {
+    width: 300px;
+  }
 }
 
 .instruction {
   color: #ccc;
   margin-top: 15px;
-  font-size: 10px;
+  font-size: 12px;
 }

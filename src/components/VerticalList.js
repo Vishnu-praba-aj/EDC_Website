@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './VerticalList.css';
+import "./VerticalList.css";
 
 const verticals = [
   { id: 1, name: "Creative & PR", emoji: "🎨" },

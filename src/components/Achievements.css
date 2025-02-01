@@ -1,29 +1,28 @@
 /* Achievements Section */
 .achievements {
-    min-width: 100vh;
     display: flex;
-    padding-top:5%;
-    padding-bottom:5%;
+    flex-wrap: wrap;
+    padding-top: 5%;
+    padding-bottom: 5%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
-    flex-wrap: wrap;
 }
 
-/* Trophy Icon Section (Left Side) */
+/* Trophy Icon Section */
 .trophy-section {
-    flex: 1.2;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .trophy-icon {
-    font-size: 12em; /* Smaller trophy icon */
-    color: #ffd700; /* Golden color */
-    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8)); /* Slightly smaller glow */
-    animation: trophy-bounce 1.5s ease infinite; /* Optional bounce animation */
+    font-size: 10em; /* Reduced trophy size for better balance */
+    color: #ffd700;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+    animation: trophy-bounce 1.5s ease infinite;
 }
 
 /* Achievements Content (Right Side) */
@@ -38,22 +37,24 @@
     margin-bottom: 8px;
     color: #ffd700;
     font-family: 'Arial', sans-serif;
-    margin-top: -20px; /* Adjust this to move the heading up */
+    margin-top: 10px; /* Adjusted to move the heading into view */
 }
 
+/* Adjusted margin on the description */
 .achievements-description {
     font-size: 1.1em;
     margin-bottom: 30px;
     color: #555;
     max-width: 500px;
     margin: 0 auto;
-    margin-top: -20px; /* Adjust this to move the description up */
+    margin-top: 10px; /* Adjusted to move the description into view */
 }
 
-
+/* Achievements Cards Section */
 .achievements-cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -66,13 +67,12 @@
     max-width: 250px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    flex: 1;
+    flex: 1 1 250px; /* Flex grow/shrink with min size */
 }
 
 .achievement-card:hover {
     transform: translateY(-8px);
-    /* Adding yellow shadow effect */
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.8); /* Yellow shadow on hover */
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.8);
 }
 
 .achievement-heading {
@@ -141,13 +141,49 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) { /* Tablet View */
     .achievements {
         flex-direction: column;
-        padding: 30px 10px; /* Reduced padding for smaller screens */
+        align-items: center;
     }
+
+    .trophy-icon {
+        font-size: 7em; /* Reduce trophy size for tablets */
+    }
+
+    .achievements-content {
+        text-align: center;
+        width: 90%;
+    }
+
+    .achievements-cards {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Adjust heading margin for tablets */
+    .achievements-title {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile View */
+    .achievements {
+        flex-direction: column;
+        padding: 30px 10px;
+    }
+
+    .trophy-icon {
+        font-size: 6em; /* Further reduce size for mobile */
+    }
+
     .achievements-cards {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Adjust heading margin for mobile */
+    .achievements-title {
+        margin-top: 10px;
     }
 }

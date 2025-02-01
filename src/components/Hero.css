@@ -239,3 +239,29 @@
   }
 }
 
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .countdown-flex-container {
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+  }
+
+  .register-button {
+    margin-top: 20px; /* Add margin to separate from countdown timer */
+  }
+
+  .LakshayaText {
+    font-size: 40px; /* Adjust the font size for smaller screens */
+  }
+
+  .Description {
+    width: 80%; /* Make the description container wider on mobile */
+    font-size: large; /* Adjust font size for mobile */
+  }
+
+  .AboutUs-content {
+    width: 100%;
+    margin-left: 0;
+    font-size: 1rem; /* Adjust text size for smaller screens */
+  }
+}

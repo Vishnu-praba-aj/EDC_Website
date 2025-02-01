@@ -6,11 +6,10 @@ body {
     color: white; /* Ensures text remains visible on the darkened background */
 }
 
-
+/* Container Styling */
 .container {
     justify-content: center;
-    min-width: 100vh;
-    width: 30%;
+    width: 40%; /* Adjust for laptop screens */
     margin: 50px auto;
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.9); /* Slight transparency for elegance */
@@ -32,10 +31,10 @@ body {
 
 /* Input Fields and Select Boxes */
 .input-data {
-    width:80vb;
+    width: 100%; /* Make inputs fill container */
     position: relative;
     margin-bottom: 25px;
-    border: 1px solid#dedbc9;; /* Field outline */
+    border: 1px solid#dedbc9; /* Field outline */
     border-radius: 8px;
     padding: 5px 10px;
     transition: all 0.3s;
@@ -137,8 +136,11 @@ button:hover {
 }
 
 /* Responsive Design */
+
+/* For screens smaller than 600px (Mobile devices) */
 @media (max-width: 600px) {
     .container {
+        width: 90%; /* Make the container nearly full width */
         padding: 20px;
     }
 
@@ -149,8 +151,61 @@ button:hover {
     button {
         font-size: 14px;
     }
+
+    /* Adjust input sizes for small screens */
+    .input-data input, .input-data select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Adjust form layout and make labels smaller */
+    .input-data label {
+        font-size: 12px;
+        top: 8px;
+    }
 }
 
+/* For tablet to laptop screens (600px - 1200px) */
+@media (min-width: 601px) and (max-width: 1200px) {
+    .container {
+        width: 60%; /* Center the container with adequate padding */
+        padding: 25px;
+    }
+
+    .container .text {
+        font-size: 24px;
+    }
+
+    .input-data input, .input-data select {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
+
+/* For larger screens, ensure the form remains well-centered and readable */
+@media (min-width: 1201px) {
+    .container {
+        width: 40%; /* Moderate width for large screens */
+        padding: 30px;
+    }
+
+    .container .text {
+        font-size: 26px;
+    }
+
+    .input-data input, .input-data select {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+/* Navigation styling */
 nav {
     text-align: center;
     margin-bottom: 1rem;
@@ -165,4 +220,33 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    background-color: #ffd700;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
 }

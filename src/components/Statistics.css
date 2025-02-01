@@ -1,5 +1,8 @@
 .stats {
- min-width:100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  
   text-align: center;
   padding-top:5%;
   padding-bottom:5%;

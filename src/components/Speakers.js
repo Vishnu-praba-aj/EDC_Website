@@ -15,7 +15,7 @@ function App(){
       <div className='Body'>
       <Carousel autoFocus={true}  infiniteLoop={true} autoPlay={true} interval={2000} width={1000} dynamicHeight={false} swipeable={true} centerMode={true} centerSlidePercentage={33.33} showThumbs={false} showIndicators={true} showStatus={false}>
         {data.map((d,index) => (
-          <div className="speakercard"  style={{ cursor: 'pointer' }}>
+          <div className="speakercard" key={index} style={{ cursor: 'pointer' }}>
             <img src={d.person_image} alt='card_image' className='card_image'></img>
             <div className='card-body'>
               <h3 className='person_name'>{d.person_name}</h3>

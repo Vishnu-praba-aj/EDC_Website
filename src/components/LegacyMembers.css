@@ -39,22 +39,27 @@
   position: fixed;
   top: 120px;
   left: 40px;
-  display: flex;
+  display: inline-flex; /* Ensures it only wraps around the text */
   flex-direction: column;
-  gap: 30px;
-  padding: 20px;
+  gap: 10px; /* Reduce gap for compact layout */
+  padding: 5px 8px; /* Adjust padding to fit text */
   background: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  border: 5px solid yellow; /* Add yellow border */
+  border: 3px solid yellow; /* Slightly thinner border */
+  width: auto; /* Adjust width to content */
+  height: auto; /* Adjust height to content */
+  justify-content: center;
 }
 
-
+/* Year Item Styling */
 .year-item {
   color: #efe087;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.2em; /* Adjust text size */
   font-weight: bold;
+  padding: 5px 10px;
+  white-space: nowrap; /* Prevents text from wrapping */
   transition: color 0.3s, text-shadow 0.3s;
 }
 
@@ -62,6 +67,10 @@
   color: #fff;
   text-shadow: 0 2px 5px rgba(255, 255, 255, 0.7);
 }
+
+
+
+
 
 /* Main Content Styling */
 .main-content {
@@ -175,4 +184,76 @@
 
 .back-button:hover {
   background-color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+  /* Adjust year navigation for mobile */
+  .year-navigation {
+    top: 80px;
+    left: 10px;
+    padding: 4px 6px;
+    gap: 6px;
+    border: 2px solid yellow;
+  }
+
+  .year-item {
+    font-size: 1em;
+    padding: 4px 6px;
+  }
+
+  /* Adjust title size */
+  .book-title {
+    font-size: 2em;
+    margin: 10px 0 30px;
+  }
+
+  /* Adjust main content */
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  /* Adjust year header */
+  .year-header {
+    font-size: 2em;
+    margin: 30px 0 20px;
+  }
+
+  /* Committee row - 2 members per row */
+  .committee-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center align */
+    gap: 10px; /* Reduce gap */
+  }
+
+  /* Reduce committee card size for better fit */
+  .committee-card1 {
+    max-width: 45%; /* Each card takes ~half the width */
+    height: 200px; /* Reduce height */
+  }
+
+  .committee-photo1 {
+    height: 120px; /* Reduce image height */
+  }
+
+  /* Adjust text inside the card */
+  .card-info {
+    padding: 6px; /* Reduce padding */
+  }
+
+  .card-info h3 {
+    font-size: 0.85em; /* Smaller font */
+  }
+
+  .card-info p {
+    font-size: 0.7em; /* Smaller font */
+  }
+
+  /* Adjust back button */
+  .back-button {
+    font-size: 14px;
+    width: auto;
+    padding: 8px 16px;
+  }
 }

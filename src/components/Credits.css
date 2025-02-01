@@ -1,11 +1,15 @@
 /* Credits Section */
 .credits {
-    min-width: 100vh;
-    padding-top:5%; /* Padding only on sides and bottom */
+    width: 100%; /* Full width */
+    padding: 5% 0; /* Padding on top and bottom */
     background-color: rgba(0, 0, 0, 0.7);
     color: #ccc;
     text-align: center;
-    margin: 0; /* No margin above to blend with previous section */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .credits-title {
@@ -25,23 +29,41 @@
 /* Horizontal List for Team Members */
 .credits-list {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center; /* Ensures items are centered */
+    align-items: center;
+    width: 90%; /* Adjusted to avoid edge cutting */
+    gap: 20px;
     list-style: none;
-    padding: 0 10px; /* Padding on sides for spacing from borders */
+    padding: 0;
     margin: 0 auto;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .credit-item {
-    font-size: 1em;
-    color: #fff;
+    font-size: 1.2em;
+    color: #ffd700;
+    text-align: center;
+    margin: 10px; /* Adds proper spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Allows items to resize based on name length */
+    min-width: 120px; /* Prevents names from getting too narrow */
+    max-width: 200px; /* Prevents names from stretching too wide */
+    overflow: hidden; /* Prevents content from spilling */
+    white-space: normal; /* Allows wrapping */
+    word-break: break-word; /* Breaks long words properly */
+    padding: 10px; /* Adds space to avoid text cutting */
 }
 
 .credit-name {
+    font-size: 1em; /* Slightly larger for visibility */
     font-weight: bold;
-    color: #ffd700; /* Highlight name in gold */
-    transition: color 0.3s ease;
+    color: #ffd700 !important;
+    display: block;
+    line-height: 1em; /* Adjusted to avoid cutting */
+    padding: 5px 0; /* Ensures space around text */
 }
 
 .credit-item:hover .credit-name {
@@ -51,7 +73,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .credits {
-        padding: 0 10px 10px; /* Adjust padding on smaller screens */
+        padding: 0 10px 10px;
     }
     .credits-title {
         font-size: 1.8em;
@@ -60,6 +82,25 @@
         font-size: 1em;
     }
     .credits-list {
-        gap: 15px; /* Reduce gap on smaller screens */
+        gap: 15px; /* Reduced gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .credits-list {
+        flex-wrap: wrap;
+        
+    }
+
+    .credit-item {
+        font-size: 0.8em;
+        margin: 0px;
+        min-width: 80px;
+        max-width: 180px;
+    }
+
+    .credit-name {
+        font-size: 1em;
+        line-height: 1em;
     }
 }
