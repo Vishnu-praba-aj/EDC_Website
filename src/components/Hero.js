@@ -1,7 +1,6 @@
 
 import './Hero.css';
 import React, { useRef,useEffect,useState } from 'react';
-import { useNavigate } from "react-router-dom";
 
 
 
@@ -22,12 +21,13 @@ function App({ homeRef,eventsRef, speakersRef, committeeRef, contactRef, scrollT
       const difference = targetDate - now;
 
       if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
         const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
         const minutes = Math.floor((difference / (1000 * 60)) % 60);
         const seconds = Math.floor((difference / 1000) % 60);
-        setTimeLeft({ hours, minutes, seconds });
+        setTimeLeft({ days, hours, minutes, seconds });
       } else {
-        setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     };
 
@@ -50,12 +50,10 @@ function App({ homeRef,eventsRef, speakersRef, committeeRef, contactRef, scrollT
     return () => clearInterval(interval);
   }, [eventName]);
 
-  const navigate = useNavigate();
-  const handleButtonClick = () => {
-    navigate("/register");
-  };
+
 
   return (
+    
     <div className='Background'>
       
       <nav className='Header'>
@@ -75,11 +73,13 @@ function App({ homeRef,eventsRef, speakersRef, committeeRef, contactRef, scrollT
       <div className="countdown-flex-container">
         <p className="EventName-display-container">
           {displayedText}&nbsp;&nbsp;&nbsp;&nbsp;
-          {timeLeft.hours.toString().padStart(2, '0')} : 
-          {timeLeft.minutes.toString().padStart(2, '0')} : 
+
+          {timeLeft.days > 0 && `${timeLeft.days} `}: 
+          {timeLeft.hours.toString().padStart(2, '0')} :
+          {timeLeft.minutes.toString().padStart(2, '0')} :
           {timeLeft.seconds.toString().padStart(2, '0')}
         </p>
-        <button className="register-button" style={{ cursor: 'pointer' }} onClick={handleButtonClick}>Register</button>
+        <button className="register-button" style={{ cursor: 'pointer' }}>Register</button>
         </div>
       </div>
 
