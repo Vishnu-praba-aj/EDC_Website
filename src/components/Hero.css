@@ -1,3 +1,4 @@
+/* Keyframes for animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -16,14 +17,21 @@
   }
 }
 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Default Styles */
 .Background {
   background-color: black;
-  min-height: 100vh;
-  min-width:100vh;
   height: 100%;
-  padding-top:5%;
-  padding-bottom:5%;
- 
 }
 
 .Header_fieldset {
@@ -35,22 +43,19 @@
   background: linear-gradient(#daa520eb, #f8d910eb, #daa520eb);
   width: 100%;
   height: 80px;
-  display: flex; /* Use flex for proper alignment */
-  justify-content: space-between; /* Distribute content evenly */
-  /*align-items: center; /* Align items vertically in the center */
+  display: flex;
+  justify-content: space-between;
   position: relative;
   z-index: 10;
   top: 0;
-  padding: 0 20px; /* Optional padding for spacing */
+  padding: 0 20px;
 }
 
 .appLogo {
   height: 80px;
   width: 80px;
   padding-right: 10px;
-  /*padding-top: 10px;*/
-  padding-left:10px;
-  
+  padding-left: 10px;
 }
 
 .profile {
@@ -67,7 +72,6 @@
   font-family: Cambri;
 }
 
-
 .optionItem {
   padding: 5px 10px;
   cursor: pointer;
@@ -75,44 +79,43 @@
   font-size: 20px;
 }
 
-
 .countdown-flex-container {
   display: flex;
   align-items: center; 
   gap: 50px; 
   justify-content: center;
-  width:100%;
-  height:90px;
+  width: 100%;
+  height: 90px;
 }
 
-.EventName-display-container{
+.EventName-display-container {
   font-size: 50px;
+  width: 70vh;
 }
+
 .countdown-timer {
   text-align: center;
   font-size: 24px;
   margin: 10px;
   color: whitesmoke;
   font-family: fantasy;
-  font-style:italic;
-  font-size:50px;
+  font-style: italic;
+  font-size: 50px;
 }
 
-.register-button{
-  height:60px;
-  width:100px;
-  border-color:#f8d910eb;
-  border-width:1px;
+.register-button {
+  height: 60px;
+  width: 100px;
+  border-color: #f8d910eb;
+  border-width: 1px;
   border-style: solid;
   border-radius: 20px;
   background-color: black;
   color: #f8d910eb;
   font-family: fantasy;
-  font-weight:300 ;
+  font-weight: 300;
   font-size: 20px;
-  /*background: linear-gradient(#daa520eb,#f8d910eb,#daa520eb);*/
 }
-
 
 .picture-description-container {
   position: relative; 
@@ -120,7 +123,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /*padding-top: 90px;*/
 }
 
 .Entrepreneur-pic {
@@ -134,49 +136,45 @@
   filter: brightness(0.5);
 }
 
-.LakshayaText{
+.LakshayaText {
   position: absolute;
-  top: 0%; /* Adjusts vertical position over the image */
-  transform: translateX(0%); /* Centers horizontally */
-  color: rgb(254, 145, 36);
+  top: 0%;
+  transform: translateX(0%);
   color: whitesmoke;
-  /*background-color: #f4f2ef70;*/
-  /*background-color: rgba(245, 245, 245, 0.601);*/
   text-align: center;
   padding: 0px;
   width: 40%;
   font-size: 80px;
   font-weight: 700;
-  font-family:Cambria;
-  z-index: 1; 
+  font-family: Cambria;
+  z-index: 1;
   animation: fadeIn 1s ease-in-out forwards;
-  /*animation: slideInFromRight 1s ease-in-out forwards;*/
 }
 
 .Description {
   position: absolute;
-  top: 20%; /* Adjusts vertical position over the image */
+  top: 20%;
   left: 20%;
-  transform: translateX(-50%); /* Centers horizontally */
+  transform: translateX(-50%);
   color: azure;
   text-align: center;
   padding: 20px;
   width: 60%;
   font-size: xx-large;
   font-style: italic;
-  background-color: rgba(0, 0, 0, 0.65); /* Translucent background */
+  background-color: rgba(0, 0, 0, 0.65);
   border-radius: 10px;
   border-color: gold;
   border-width: 1px;
   border-style: solid;
-  z-index: 1; 
+  z-index: 1;
   animation: slideInFromRight 1s ease-in-out forwards;
 }
 
-.speakers-title-container{
-  width:100%;
-  height:60px;
-  background:linear-gradient(#ad8318,#f8d910,#ad8318); ;
+.speakers-title-container {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(#ad8318, #f8d910, #ad8318);
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -188,18 +186,15 @@
   width: 100%;
   justify-content: center;
   position: relative;
-  
   animation: fadeIn 2s ease-in-out;
 }
-
-
 
 .AboutUs {
   color: gold;
   justify-content: center;
   text-align: center;
   padding-top: 80px;
-  font-size: 2rem; /* Adjusted size */
+  font-size: 2rem;
   padding-bottom: 10px;
   font-family: 'Cambria', serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -207,7 +202,7 @@
 
 .AboutUs-content {
   font-size: 1.2rem;
-  width:90%;
+  width: 90%;
   margin-left: 90px;
   color: azure;
   padding-left: 10px;
@@ -215,53 +210,118 @@
   line-height: 1.8;
   text-align: center;
   opacity: 1;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); /* Add shadow around content */
-  border-radius: 10px; /* Optional for smoother edges */
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .AboutUs-content:hover {
   transform: scale(1.02);
-  box-shadow: 0 8px 12px gold; /* Enhance shadow on hover */
+  box-shadow: 0 8px 12px gold;
 }
 
+/* Responsive Design - Adjust text sizes */
 
+/* For Mobile devices */
+@media (max-width: 600px) {
 
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
+    .options{
+      gap:0px;
+      padding-left: 0px;
+      justify-items: center;
+      margin-right:3px;
+    }
+  
+  .optionItem {
+    padding: 1px 1px;
+    font-size: 1.3vh;
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
-/* Responsive Styles for Mobile */
-@media (max-width: 768px) {
   .countdown-flex-container {
-    flex-direction: column; /* Stack vertically */
-    align-items: center;
+    gap: 3px; 
+  }
+  
+
+  .EventName-display-container {
+    font-size: 3vh;
+    width: 30vh;
   }
 
-  .register-button {
-    margin-top: 20px; /* Add margin to separate from countdown timer */
+  .Entrepreneur-pic {
+    width: 100%;
+    height: 75vh;
+    padding-top: 1px;
+    padding-left: 0px;
   }
 
   .LakshayaText {
-    font-size: 40px; /* Adjust the font size for smaller screens */
+    font-size: 4vh;
+    padding-top: 2vh;
   }
 
   .Description {
-    width: 80%; /* Make the description container wider on mobile */
-    font-size: large; /* Adjust font size for mobile */
+    font-size: 18px !important;
+  }
+
+  .AboutUs {
+    font-size: 1.5rem ;
+  }
+
+  .AboutUs-container{
+    padding-left: 0px;
   }
 
   .AboutUs-content {
+    font-size: 1.1rem ;
+    margin-left:3vh;
+    margin-right: 3vh;
+  }
+}
+
+/* For Tablets */
+@media (max-width: 1024px) {
+
+
+  .options{
+    gap:0px;
+    padding-left: 0px;
+    justify-items: center;
+    margin-right:3px;
+  }
+
+.optionItem {
+  padding: 1px 1px;
+  font-size: 1.3vh;
+}
+
+  .LakshayaText {
+    font-size: 4vh ;
+    padding-top: 2vh;
+  }
+
+  .Description {
+    font-size: 24px ;
+  }
+
+  .Entrepreneur-pic {
     width: 100%;
-    margin-left: 0;
-    font-size: 1rem; /* Adjust text size for smaller screens */
+    height: 75vh;
+    padding-top: 1px;
+    padding-left: 0px;
+  }
+
+
+  .AboutUs {
+    font-size: 1.8rem ;
+  }
+
+  .AboutUs-container{
+    padding-left: 0px;
+  }
+
+  .AboutUs-content {
+    font-size: 1.1rem ;
+    margin-left:3vh;
+    margin-right: 3vh;
   }
 }
