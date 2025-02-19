@@ -57,11 +57,12 @@ function App() {
                 <div ref={eventsRef}>
                   <Timeline />
                 </div>
-                <div ref={speakersRef}>
-                  <Speakers />
-                </div>
+                
                 <div ref={committeeRef}>
                   <Faculty />
+                </div>
+                <div ref={speakersRef}>
+                  <Speakers />
                 </div>
 
                 <Committee />
